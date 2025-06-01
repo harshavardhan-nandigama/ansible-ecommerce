@@ -36,6 +36,10 @@
         dest: /app
         remote_src: yes
 
+    - name: install dependenceies
+      community.general.npm:
+        path: /app
+
     - name: copy cart service to system directory
       ansible.builtin.copy:
         src: cart.service
