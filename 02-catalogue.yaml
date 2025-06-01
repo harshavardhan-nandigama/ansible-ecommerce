@@ -72,7 +72,7 @@
 
     - name: print catalogue output
       ansible.builtin.debug:
-        msg: {{ catalogue_output.stdout }}
+        msg: "{{ catalogue_output.stdout }}"
 
     - name: load products
       ansible.builtin.shell: mongosh --host mongodb.harshavn24.site < /app/db/master-data.js
