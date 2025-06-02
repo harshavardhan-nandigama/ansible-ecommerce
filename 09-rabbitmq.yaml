@@ -11,6 +11,11 @@
     ansible.builtin.dnf:
       name: rabbitmq-server
       state: installed
+  
+  - name: enalbe and start rabbitmq
+    ansible.builtin.service:
+      name: rabbitmq-server
+      state: started
       enabled: yes
 
   - name: create rabbitmq user
